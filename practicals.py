@@ -8,6 +8,31 @@ def  odd_even(numbers):
         else:
             print(f"{i} is odd")
 
-
-
 odd_even([1,2,3,4,5,6,7,8,9])
+
+
+"__________________________________"
+
+
+def non_repeting(letter):
+    arr=[]
+    for i in letter:
+        if letter.count(i)==1:
+            arr.append(i)
+        
+    print(arr)
+
+non_repeting("midhunn")
+
+
+def duplicate(char):
+
+    arr=[]
+    for i in char:
+        if char.count(i)==2:
+            arr.append(i)
+    
+    print(arr)
+
+duplicate("midhunn")
+         
