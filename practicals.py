@@ -32,7 +32,7 @@ def duplicate(char):
         if char.count(i)==2:
             arr.append(i)
     
-    print(arr)
+    print(set(arr))
 
 duplicate("midhunn")
          
