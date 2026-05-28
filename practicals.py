@@ -40,11 +40,13 @@ duplicate("midhunn")
 
 def find_target(nums,target):
     for i in range(len(nums)):
+        if nums[i]==target:
+            return print([i])
         for j in  range(i+1,len(nums)):
             if nums[i]+nums[j]==target:
                 return print([i,j])
 
-find_target([2,7,11,15],10)
+find_target([2,7,11,15],11)
 
 
 
