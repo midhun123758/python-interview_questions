@@ -48,5 +48,20 @@ def find_target(nums,target):
 
 find_target([2,7,11,15],11)
 
+#"Longest Common Prefix   Example: ["flower","flow","flight"]  Output: "fl""
 
+def longest_word(word):
+    words=''.join(word)
+    coun=0
+    len=[]
+    for i in words:
+        if words.count(i)>=coun:
+            coun=words.count(i)
+            len.append(i)
+
+    print("".join(set(len)))
+
+
+
+longest_word(["flower","flow","flight"])
 
