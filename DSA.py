@@ -54,9 +54,10 @@ stack.pop()
 print(stack)
 
 import queue
-stack1 = queue.LifoQueue()
+stack1 = queue.LifoQueue(2)
 stack1.put(10)
 stack1.put(20)
-
+stack1.put(20,timeout=1)
+print(stack1.get())
 print(stack1.get())
 print(stack1.get())
