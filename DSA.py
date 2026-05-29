@@ -40,3 +40,23 @@ s.push(300)
 print(s.peek())
 print(s)
 print(s.size())
+
+
+# implimentatiom  of stack  use dif moduels
+
+import collections
+
+stack=collections.deque()
+
+stack.append(10)
+stack.append(20)
+stack.pop()
+print(stack)
+
+import queue
+stack1 = queue.LifoQueue()
+stack1.put(10)
+stack1.put(20)
+
+print(stack1.get())
+print(stack1.get())
