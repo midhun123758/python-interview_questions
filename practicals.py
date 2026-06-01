@@ -61,7 +61,24 @@ def longest_word(word):
 
     print("".join(set(len)))
 
-
-
 longest_word(["flower","flow","flight"])
 
+
+
+
+# finding the max diffrent
+
+listt2=[1,2,6,3,4,5]
+dif=0
+
+for i in range(len(listt2)):
+    for j in range(len(listt2)):
+        val=listt2[i] - listt2[j]
+        if val > dif:
+            dif = val
+print(dif)
+
+# effcent way
+
+data = max(listt2) - min(listt2)
+print(data)

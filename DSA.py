@@ -54,10 +54,51 @@ stack.pop()
 print(stack)
 
 import queue
-stack1 = queue.LifoQueue(2)
+stack1 = queue.LifoQueue()
 stack1.put(10)
 stack1.put(20)
 stack1.put(20,timeout=1)
 print(stack1.get())
-print(stack1.get())
-print(stack1.get())
+
+
+
+# queue compilation using list
+
+# queue=[]
+# element=input("enter the element")
+# queue.append(element)
+# print(element)
+# def defqueue():
+#     if not queue:
+#         print("quie is empty ")
+#     else:
+#         element=queue.pop(0)
+#         print("element remved from queue")
+
+queue1=[]
+
+element=input("enter your element")
+queue1.append(element)
+print(queue1)
+
+def defqueue():
+    if not queue1:
+        print("queue is empty ")
+    else:
+        element=queue1.pop(0)
+        print("element remved from queue")
+defqueue()
+print(queue1)
+
+
+from collections import deque
+queue2=deque()
+
+element=input("enter you element")
+queue2.append(element)
+print(queue2)
+
+element=input("enter yes for deleting")
+if element=="yes":
+    queue2.popleft()
+    print(queue2)
