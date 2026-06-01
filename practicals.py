@@ -82,3 +82,42 @@ print(dif)
 
 data = max(listt2) - min(listt2)
 print(data)
+
+
+
+
+# zero moving
+
+list3=[1,2,0,3,4,0,0]
+
+data=[x for x in list3 if x==0]
+data2=[x for x in list3 if x !=0]
+
+print(data2+data)
+
+
+# Find Missing Number
+
+arr = [1,2,4,5]
+
+data=[x for x in range(6) if x !=0 ]
+val=0
+for i in data:
+    if i not in arr:
+        val=i
+    
+print(val)
+
+# Find Frequency of Elements
+
+freq={x:arr.count(x) for x in arr }
+print(freq)
+
+
+val=[]
+for  i in range(len(arr)):
+    val.append(f"{arr[i]},=,{arr.count(arr[i])}")
+print(set(val))
+
+
+
