@@ -120,3 +120,47 @@ node2.next=node3
 print(node1.next.data)
 print(node2.next.data)
 print(node3.next)
+
+
+
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        
+class LinkedList:
+    def __init__(self):
+        self.head=None
+        
+    def insert(self,data):
+        new_node=Node(data)
+        if self.head is None:
+            self.head=new_node 
+            return 
+        temp=self.head
+        while temp.next:
+            temp=temp.next
+        temp.next=new_node 
+    def display(self):
+        temp=self.head
+        while temp :
+            print(f"data{temp.data}")
+            temp=temp.next
+            
+LL=LinkedList()
+LL.insert(10)
+
+LL.insert(20)
+LL.display()
+        
+        
+    
+
+
+
+
+
+
+
+
