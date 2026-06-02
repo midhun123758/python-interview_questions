@@ -121,3 +121,19 @@ print(set(val))
 
 
 
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+node1=Node(10)
+print(node1.data)
+print(node1.next)
+
+node2=Node(20)
+node3=Node(30)
+node1.next=node2
+node2.next=node3
+print(node1.next.data)
+print(node2.next.data)
+print(node3.next)
