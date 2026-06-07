@@ -305,3 +305,15 @@ def valid_paranth(val):
     return len(stack)==0
     
 print(valid_paranth("({[]})"))
+
+
+arr=[1,2,3,4,5]
+prefix=[0]*len(arr)
+print(prefix)
+prefix[0]=arr[0]
+print(prefix)
+
+for i in range(1,len(arr)):
+    prefix[i]=prefix[i-1]+arr[i]
+
+print(prefix)
