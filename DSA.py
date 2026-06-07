@@ -154,7 +154,25 @@ LL.insert(10)
 LL.insert(20)
 LL.display()
         
-        
+queue=[]
+
+queue.append(10)
+queue.append(20)
+print(queue)
+#deque
+dlt=queue.pop(0)
+print(dlt)
+#first_elment
+
+first=queue[0]
+print(first)
+
+is_empty=len(queue) == 0
+
+print(is_empty)
+
+
+Size= print(len(queue))      
     
 
 
@@ -164,3 +182,45 @@ LL.display()
 
 
 
+from collections import deque
+
+class Learning_queue:
+    def __init__(self): 
+        self.queue = deque()
+           
+    def insert(self, value):
+        self.queue.append(value)
+        print(value, "added")
+
+    def delete(self):
+        if len(self.queue) == 0:
+            return print("queue is empty")
+        data = self.queue.popleft()
+        print(data, "deleted")
+         
+    def peek(self):
+        if len(self.queue) == 0:
+            return print("queue is empty")
+        data = self.queue[0]
+        print("first value is", data)
+         
+    def is_empty(self):
+        if len(self.queue) == 0:
+            return print("queue is empty")
+        print(len(self.queue) == 0)
+
+    def size(self):
+        if len(self.queue) == 0:
+            return print("queue is empty")
+        print(len(self.queue))
+
+
+q = Learning_queue()
+q.insert(10) # will say "queue is empty" because you check before adding
+q.insert(20)
+q.size()
+q.peek()
+q.delete()
+q.is_empty()
+q.delete()
+q.is_empty()    
