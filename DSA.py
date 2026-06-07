@@ -236,3 +236,28 @@ print(val.qsize())
 print(val.get())
 print(val.qsize())
 
+# prefix
+def expression(exp):
+    stack=[]
+    for char in reversed(exp):
+        if char.isdigit():
+            stack.append(int(char))
+            print(f"{char}value pushed")
+        else:
+            a=stack.pop()
+            b=stack.pop()
+            print(f"value poped{a,b}")
+            if char == "+":
+                stack.append(a+b)
+            elif char=="-":
+                stack.append(a-b)
+            elif char =="*":
+                stack.append(a*b)
+            elif char == "/":
+                stack.append(a/b)
+    return stack.pop()
+            
+
+
+print(expression("+52"))
+
