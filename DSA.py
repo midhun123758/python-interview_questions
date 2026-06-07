@@ -286,3 +286,22 @@ def post_fix(exp):
 
 print(post_fix("52+"))
 
+
+def valid_paranth(val):
+    stack=[]
+    expression={')':'(',']':'[','}':'{'}
+    
+    for char in val :
+        if char in '([{':
+            stack.append(char)
+        
+        else :
+            if not stack:
+                return False
+            a=stack.pop()
+            if expression[char] != a:
+                return False 
+                
+    return len(stack)==0
+    
+print(valid_paranth("({[]})"))
