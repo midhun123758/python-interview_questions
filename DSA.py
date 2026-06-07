@@ -224,3 +224,15 @@ q.delete()
 q.is_empty()
 q.delete()
 q.is_empty()    
+
+
+
+import queue
+val=queue.Queue()
+val.put(10)
+val.put(20)
+val.put(30)
+print(val.qsize())
+print(val.get())
+print(val.qsize())
+
