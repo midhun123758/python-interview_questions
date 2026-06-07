@@ -261,3 +261,28 @@ def expression(exp):
 
 print(expression("+52"))
 
+def post_fix(exp):
+    
+    stack=[]
+    for char in exp:
+        if char.isdigit():
+            stack.append(int(char))
+            print(f"{char},added into stack")
+            
+        else:
+            a=stack.pop()
+            b=stack.pop()
+            
+            if char =="+":
+                stack.append(a+b)
+            elif char == "-":
+                stack .append(a-b)
+            elif char == "*":
+                stack .append(a*b)
+            elif char == "/":
+                stack .append(a/b)
+    return stack.pop()
+
+
+print(post_fix("52+"))
+
