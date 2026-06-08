@@ -318,6 +318,13 @@ for i in range(1,len(arr)):
 
 print(prefix)
 
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        self.prev=None
+        
 class Linked_list:
     def __init__(self):
        self.head=None
@@ -377,9 +384,45 @@ class Linked_list:
         
         temp.next.prev=temp.prev
         temp.prev.next=temp.next
-        
+    def reverse_list(self):
+        temp=self.head
+        if temp == self.head and temp.next is None:
+            return temp.data
+        else:
+            while temp:
+                 temp.prev,temp.next = temp.next,temp.prev
+                 if temp.prev is None:
+                    self.head = temp 
+                    break 
+                 temp=temp.prev
+            
+
+                
+    def display(self):
+        temp=self.head
+        while temp:
+            print(temp.data)
+            temp=temp.next
+           
         
 
 data=Linked_list()
 data.add_at_begine(10)
+data.add_at_begine(50)
+data.display()
+data.reverse_list()
+data.display()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
