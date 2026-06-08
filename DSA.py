@@ -317,3 +317,69 @@ for i in range(1,len(arr)):
     prefix[i]=prefix[i-1]+arr[i]
 
 print(prefix)
+
+class Linked_list:
+    def __init__(self):
+       self.head=None
+
+    def add_at_begine(self,data):
+        new_node=Node(data)
+        temp=self.head
+        if temp:
+            temp.prev=new_node
+            new_node.next=temp
+        self.head=new_node
+
+    def add_at_last(self,data):
+        new_node=Node(data)
+        if self.head is None:
+            temp=new_node 
+            return 
+        temp=self.head
+        while temp.next:
+            temp=temp.next
+        temp.next=new_node
+        new_node.prev=temp
+
+    def add_between(self,data,value):
+        new_node=Node(data)
+        temp=self.head
+        while temp and temp.data != value:
+            temp=temp.next
+        if temp is None:
+            print("value not found")
+            return 
+        
+        else:
+            prev=temp.prev
+            prev.next=new_node
+            new_node.prev=prev
+            new_node.next=temp 
+            temp.prev=new_node
+
+    def deletion(self,value):
+        temp=self.head
+        while temp and temp.data != value:
+            temp=temp.next
+        if temp is None:
+            print("the value is not in ")
+            return   
+        elif temp==self.head and temp.next is None:
+            self.head=None
+            return
+        elif temp.next is None:
+            temp.prev.next=None
+            return 
+        elif temp == self.head:
+            temp.next.prev=None
+            self.head=temp.next
+            return
+        
+        temp.next.prev=temp.prev
+        temp.prev.next=temp.next
+        
+        
+
+data=Linked_list()
+data.add_at_begine(10)
+
