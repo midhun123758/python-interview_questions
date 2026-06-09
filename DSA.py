@@ -416,6 +416,25 @@ data.display()
 
 
 
+array=[1,2,3,4,5]
+
+target=7
+
+
+left=0
+right=len(array)-1
+
+while left < right:
+    totel=array[left] + array[right]
+    if  totel == target:
+        print(array[left],array[right])
+        break
+    elif totel <  target:
+        left+=1
+    elif totel >  target:
+        right-=1
+        
+
 
 
 
