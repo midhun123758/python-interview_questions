@@ -434,6 +434,21 @@ while left < right:
     elif totel >  target:
         right-=1
         
+check="malayalam"
+left=0
+right=len(check)-1
+print(check)
+while left < right:
+    if check[left]!=check[right]:
+        print("not palindrome")
+        break
+    left+=1
+    right-=1
+else:
+    print("palindrome")
+
+
+
 
 
 
